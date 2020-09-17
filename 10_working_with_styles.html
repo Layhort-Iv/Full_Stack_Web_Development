@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-bind:style="{color: mystyle1.color, fontSize: mystyle1.fontSize}" @mouseover="toGreen"
+            @mouseout="toBlue">{{message}}</div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                mystyle1: {
+                    color: 'blue',
+                    fontSize: '30px',
+                },
+                message: "Hello World"
+            },
+            methods: {
+                toGreen: function () {
+                    this.mystyle1.color = 'green',
+                        this.mystyle1.fontSize = '50px'
+                },
+                toBlue: function () {
+                    this.mystyle1.color = 'blue',
+                        this.mystyle1.fontSize = '30px'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .hovered {
+            color: blue;
+            font-size: 40px;
+        }
+
+        .nothovered {
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div v-bind:class="isActive? 'hovered': 'nothovered'" @mouseover="isActive=true" @mouseout="isActive=false">
+            {{message}}
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                message: "Hello World",
+                isActive: false
+            }
+        })
+    </script>
+</body>
+
+</html>
