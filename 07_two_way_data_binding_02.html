@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="checkbox" id="menu1" value="Menu1" v-model="menus">
+        <label for="menu1">Menu1</label><br>
+        <input type="checkbox" id="menu2" value="Menu2" v-model="menus">
+        <label for="menu2">Menu2</label><br>
+        <input type="checkbox" id="menu3" value="Menu3" v-model="menus">
+        <label for="menu3">Menu3</label><br>
+        <h1> {{menus}} </h1>
+
+    </div>
+
+    <script>
+        var myVueInstance = new Vue({
+            el: "#app",
+            data: {
+                menus: ["Menu1", "Menu2", "Menu3"]
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <form action="get">
+            <input type="text" v-model="message">
+            <h1>{{message}}</h1>
+        </form>
+    </div>
+
+    <script>
+        var myVueInstance = new Vue({
+            el: "#app",
+            data: {
+                message: ""
+            }
+        })
+    </script>
+</body>
+
+</html>
