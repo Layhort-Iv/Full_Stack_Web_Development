@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <form action="get">
+            <table>
+                <tr>
+                    <td>
+                        <ol>
+                            <li v-for="student in table_details">{{student.id}} : {{student.name}} : {{student.age}}
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        var vueInstance = new Vue({
+            el: "#app",
+            data: {
+                table_details: [{
+                        id: 123,
+                        name: "Tey",
+                        age: 20
+                    },
+                    {
+                        id: 124,
+                        name: "Devid",
+                        age: 19
+                    },
+                    {
+                        id: 125,
+                        name: "Daniel",
+                        age: 20
+                    },
+                    {
+                        id: 126,
+                        name: "Dalin",
+                        age: 20
+                    },
+                    {
+                        id: 127,
+                        name: "Sovann",
+                        age: 19
+                    },
+                ],
+                characters: ["AA", "BB", "CC", "DD"]
+            }
+        })
+    </script>
+</body>
+
+</html>
