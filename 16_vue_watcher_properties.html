@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+
+    <script>
+        var vueInstance = new Vue({
+            el: "#app",
+            data: {
+                status: false
+            },
+
+            //I've tried this way as in the instruction but it didn't work
+            // watch: {
+            //     watchStatus: function () {
+            //         console.log("Status is changed");
+            //     }
+            // }
+
+            
+            watch: {
+                status: function () {
+                    console.log("Status is changed");
+                }
+            }
+        })
+        
+    </script>
+</body>
+<!-- We use watcher when:
+    - You want to listen when a data property changes, and perform some action
+    - You want to listen to a prop value change
+    - You only need to listen to one specific property (you can’t watch multiple properties at the same time)
+    - You want to watch a data property until it reaches some specific value and then do something
+-->
+</html>

@@ -25,8 +25,14 @@
                 }
             }
         })
-        // A computed property is used to declaratively describe a value that depends on other values. When you data-bind to a computed property inside the template, Vue knows when to update the DOM when any of the values depended upon by the computed property has changed.
     </script>
 </body>
-
+<!-- We use Computed Property when:
+    - You need to compose new data from existing data sources
+    - You need to listen to changes of more than one data property
+    - You need to reference a value from the template. In this case, creating a computed property is the best thing because it's cached.
+    - You have a variable you use in your template that's built from one or more data properties.
+    
+A computed property is used to declaratively describe a value that depends on other values. When you data-bind to a computed property inside the template, Vue knows when to update the DOM when any of the values depended upon by the computed property has changed.
+-->
 </html>
