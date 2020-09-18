@@ -6,17 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue JS</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <style>
-        .yes {
-            color: green;
-            font-size: 50px;
-        }
-
-        .no {
-            color: red;
-            font-size: 50px;
-        }
-    </style>
 </head>
 
 <body>
@@ -29,11 +18,12 @@
             el: "#app",
 
             methods: {
-                helloMethod: () => {
-                    alert('Hello from the Vue method')
+                helloMethod() {
+                    console.log('Hello from the Vue method');
                 }
             }
         })
+        //Note: Methods are especially useful when you need to perform an action and you attach a v-on directive on an element to handle events.
     </script>
 </body>
 
