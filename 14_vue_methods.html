@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .yes {
+            color: green;
+            font-size: 50px;
+        }
+
+        .no {
+            color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="helloMethod">Call helloMethod</button>
+    </div>
+
+    <script>
+        var vueInstance = new Vue({
+            el: "#app",
+
+            methods: {
+                helloMethod: () => {
+                    alert('Hello from the Vue method')
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
