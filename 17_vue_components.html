@@ -10,14 +10,30 @@
 
 <body>
     <div id="app">
+        <kit></kit>
     </div>
 
     <script>
+        Vue.component('kit', {
+            template: "<div><button @click='getAscii()'>Get Ascii</button><h1 v-if='isClicked'>{{sumOfAscii}}</h1></div>",
+            data() {
+                return {
+                    schoolName: "Kirirom Institute of Technology",
+                    sumOfAscii: 0,
+                    isClicked: false
+                }
+            },
+            methods: {
+                getAscii() {
+                    this.isClicked = true
+                    for (var i = 0; i < this.schoolName.length; i++)
+                        this.sumOfAscii += this.schoolName.charCodeAt(i)
+                    return sumAscii
+                }
+            }
+        });
         var myVueInstance = new Vue({
             el: "#app",
-            data: {
-                
-            }
         })
     </script>
 </body>
@@ -25,4 +41,5 @@
     Components are single, independent units of an interface. They can have their own state, markup and style.
 
  -->
+
 </html>
