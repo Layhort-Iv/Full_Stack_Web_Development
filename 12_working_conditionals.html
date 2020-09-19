@@ -22,8 +22,8 @@
 <body>
     <div id="app">
         <form>
-            <input type="text" placeholder="Enter your name here" id="inputName" v-model="name">
-            <h1 v-if="name=='Pikachu' && checkName(name)" :class="'yes'">Access Granted welcome
+            <input type="text" placeholder="Enter your name here" v-model="name">
+            <h1 v-if="name == 'Pikachu' && isActive" :class="'yes'">Access Granted welcome
                 Mr/Ms.{{name}}</h1>
             <h1 v-else :class="'no'">Access Denied Sorry Mr/Ms. {{name}}</h1>
         </form>
@@ -34,7 +34,7 @@
             el: "#app",
             data: {
                 name: "Pikachu",
-                isActive: false
+                isActive: true
             }
         })
     </script>
